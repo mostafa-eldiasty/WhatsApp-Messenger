@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/adapterContactMessageContainer"
+    android:layout_gravity="end"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateTextView"
+        android:text="TODAY"
+        android:background="#D4E9F3"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="280dp"
+        android:layout_height="90dp"
+        android:id="@+id/contactLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#E2FFC7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contactImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/profile_icon_round"
+            app:layout_constraintStart_toStartOf="@id/contactLayout"
+            app:layout_constraintTop_toTopOf="@id/contactLayout"
+            app:layout_constraintBottom_toBottomOf="@id/contactLayout"/>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:maxWidth="70dp"
+            android:text="10:18 PM"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/contactLayout"
+            app:layout_constraintEnd_toStartOf="@+id/seenTextView" />
+
+        <TextView
+            android:id="@+id/seenTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓"
+            android:layout_marginRight="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/timeTextView"
+            app:layout_constraintTop_toTopOf="@+id/timeTextView"
+            app:layout_constraintEnd_toEndOf="@id/contactLayout"/>
+
+        <TextView
+            android:id="@+id/contactNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/contactImageView"
+            app:layout_constraintTop_toTopOf="@+id/contactImageView"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/contactNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number"
+            android:textColor="#00FFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/contactNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/contactNameTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/adapterRecordMessageContainer"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateTextView"
+        android:text="TODAY"
+        android:background="#D4E9F3"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/locLayout"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView">
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_baseline_play_arrow_24"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/locLayout"
+            app:layout_constraintStart_toStartOf="@id/locLayout"
+            app:layout_constraintTop_toTopOf="@+id/locLayout" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/playSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/playButton"
+            app:layout_constraintEnd_toStartOf="@id/contactImageView"
+            app:layout_constraintStart_toEndOf="@id/playButton"
+            app:layout_constraintTop_toTopOf="@id/playButton" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contactImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/profile_icon_round"
+            app:layout_constraintBottom_toBottomOf="@+id/locLayout"
+            app:layout_constraintEnd_toEndOf="@id/locLayout"
+            app:layout_constraintTop_toTopOf="@+id/locLayout" />
+
+        <ImageView
+            android:id="@+id/micImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_mic_green_24"
+            app:layout_constraintBottom_toBottomOf="@id/contactImageView"
+            app:layout_constraintStart_toEndOf="@id/playSeekBar" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:maxWidth="70dp"
+            android:text="10:18 PM"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/locLayout"
+            app:layout_constraintEnd_toStartOf="@+id/seenTextView"
+            app:layout_constraintTop_toBottomOf="@id/playSeekBar" />
+
+        <TextView
+            android:id="@+id/seenTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="✓"
+            app:layout_constraintBottom_toBottomOf="@+id/timeTextView"
+            app:layout_constraintEnd_toEndOf="@+id/playSeekBar"
+            app:layout_constraintTop_toTopOf="@+id/timeTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

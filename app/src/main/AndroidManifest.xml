@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.whatsappmessenger">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".OfflineFirebase"
+        android:allowBackup="true"
+        android:icon="@drawable/whatsapp"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/whatsapp"
+        android:supportsRtl="true"
+        android:theme="@style/AppNoActionBar">
+        <activity android:name=".SplashScreenActivity"
+            android:theme="@style/NoTitleBarStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DocumentViewActivity" />
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".Activities.ChatRoomActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".Activities.FriendsActivity"
+            android:theme="@style/NoTitleBarStyle" />
+        <activity
+            android:name=".Activities.ChatsActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".Activities.LoginActivity">
+
+        </activity>
+        <activity android:name=".Activities.SmsCodeConfirmationActivity"></activity>
+        <activity android:name=".Activities.ProfileInfoActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service android:name=".Notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
