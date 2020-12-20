@@ -46,11 +46,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     private void showNotification() {
-
-        String userPhonenumber = FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber();
-
+        final String userPhonenumber = FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        Query query = reference.child("chats").orderByChild("receiver").equalTo(userPhonenumber);
+        Query query = reference.child("chats").endAt(userPhonenumber + "\uf8ff","sender_receiver");
 
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             List<String> messages = new ArrayList<>();
@@ -61,9 +59,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 Iterator it = snapshot.getChildren().iterator();
                 while(it.hasNext()){
                     DataSnapshot receivedMessage = (DataSnapshot) it.next();
-                    if(receivedMessage.child("status").getValue().equals("sent")){
+                    if(receivedMessage.child("sender_receiver").getValue().toString().split("_")[1].equals(userPhonenumber) &&
+                            (receivedMessage.child("status").getValue().equals("sent") || receivedMessage.child("status").getValue().equals("delivered"))){
                         messages.add(receivedMessage.child("message").getValue().toString());
-                        senders.add(receivedMessage.child("sender").getValue().toString());
+                        senders.add(receivedMessage.child("sender_receiver").getValue().toString().split("_")[0]);
                         receivedMessage.child("status").getRef().setValue("delivered");
                     }
                 }
