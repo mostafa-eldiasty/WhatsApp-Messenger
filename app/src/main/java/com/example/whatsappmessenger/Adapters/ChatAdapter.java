@@ -174,7 +174,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
         }
         else if(messageList.get(position).getType().equals("record")) {
             if(messageList.get(position).getStatus().equals("seen")){
-//                holder.playSeekBar.getThumb().setColorFilter(Color.parseColor("#3FB6F2"), PorterDuff.Mode.MULTIPLY);
                 holder.micImageView.setImageResource(R.drawable.ic_baseline_mic_lightblue_24);
             }
             String phoneNumber = FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber();

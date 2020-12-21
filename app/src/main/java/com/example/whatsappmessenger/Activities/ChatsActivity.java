@@ -15,6 +15,7 @@ import com.example.whatsappmessenger.Classes.Chats;
 import com.example.whatsappmessenger.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -90,7 +91,8 @@ public class ChatsActivity extends RootActivity implements View.OnClickListener 
     @Override
     protected void onStart() {
         super.onStart();
+        String phoneNumber = FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        reference.child("token").setValue(FirebaseInstanceId.getInstance().getToken());
+        reference.child(phoneNumber).child("token").setValue(FirebaseInstanceId.getInstance().getToken());
     }
 }

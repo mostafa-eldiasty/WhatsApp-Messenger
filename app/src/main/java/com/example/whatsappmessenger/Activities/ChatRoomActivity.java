@@ -213,7 +213,7 @@ public class ChatRoomActivity extends RootActivity implements View.OnClickListen
                         messageList.add(new Message(chat.child("message").getValue().toString(), sender_receiver[0], chat.child("time").getValue().toString(),
                                 chat.child("status").getValue().toString(), chat.child("type").getValue().toString()));
                     } else if (sender_receiver[0].equals(receiverPhoneNumber) && sender_receiver[1].equals(senderPhoneNumber)) {
-                        if (!getLifecycle().getCurrentState().name().equals("DESTROYED"))
+                        if (getLifecycle().getCurrentState().name().equals("RESUMED"))
                             chat.child("status").getRef().setValue("seen");
 
                         messageList.add(new Message(chat.child("message").getValue().toString(), sender_receiver[0], chat.child("time").getValue().toString(),
@@ -585,7 +585,7 @@ public class ChatRoomActivity extends RootActivity implements View.OnClickListen
                 responseBodyCall.enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(retrofit2.Call<ResponseBody> call, retrofit2.Response<ResponseBody> response) {
-//                        Log.d("TAG", "onResponse: ");
+                        Log.d("TAG", "onResponse: ");
                     }
 
                     @Override

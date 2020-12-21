@@ -85,15 +85,20 @@ public class Chats {
                     String[] sender_receiver = chat.child("sender_receiver").getValue().toString().split("_");
 
                     String phone = "";
-                    if(sender_receiver[0].equals(currentUserPhoneNumber))
+                    if(sender_receiver[0].equals(currentUserPhoneNumber)) {
                         phone = sender_receiver[1];
-                    else if(sender_receiver[1].equals(currentUserPhoneNumber))
+
+                        chatsMap.remove(phone);
+                        chatsMap.put(phone,new Chat(mapNumberName.get(phone),phone,chat.child("message").getValue().toString(),
+                                chat.child("time").getValue().toString(), chat.child("type").getValue().toString()));
+                    }
+                    else if(sender_receiver[1].equals(currentUserPhoneNumber)) {
                         phone = sender_receiver[0];
 
                         chatsMap.remove(phone);
                         chatsMap.put(phone,new Chat(mapNumberName.get(phone),phone,chat.child("message").getValue().toString(),
                                 chat.child("time").getValue().toString(), chat.child("type").getValue().toString()));
-
+                    }
                 }
                 List<Chat> chatList = new ArrayList(chatsMap.values());
                 Collections.reverse(chatList);

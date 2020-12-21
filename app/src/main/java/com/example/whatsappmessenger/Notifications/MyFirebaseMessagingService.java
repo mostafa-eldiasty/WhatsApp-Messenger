@@ -72,7 +72,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                     PendingIntent pendingIntent =PendingIntent.getActivity(getApplicationContext(), 2, intent,PendingIntent.FLAG_UPDATE_CURRENT);
 
                     NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext())
-                            .setSmallIcon(R.drawable.notification_image)
+                            .setSmallIcon(R.drawable.whatsapp)
                             .setContentTitle("WhatsApp")
                             .setContentText(messages.size() + " messages from " + senders.size() + " chats")
                             .setAutoCancel(true).setContentIntent(pendingIntent);
