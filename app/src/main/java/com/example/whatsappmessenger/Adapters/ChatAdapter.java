@@ -256,7 +256,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
                             int mCurrentPosition = mediaPlayer.getCurrentPosition();
                             holder.playSeekBar.setProgress(mCurrentPosition);
 
-                            if(mediaPlayer.getDuration() == mCurrentPosition) {
+                            if(mediaPlayer.getDuration()-mediaPlayer.getCurrentPosition() < 1000) {
                                 handler.removeCallbacks(this);
                                 holder.playSeekBar.setOnSeekBarChangeListener(null);
                                 holder.playSeekBar.setProgress(0);
