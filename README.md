@@ -1,24 +1,26 @@
 # WhatsApp-Messenger
 
 # ScreenShots
-![Screenshot_20201221-030429](https://user-images.githubusercontent.com/53410915/102731983-0c685a00-4342-11eb-8eb5-81935e9cb532.png)
-![Screenshot_20201221-030456](https://user-images.githubusercontent.com/53410915/102731987-10947780-4342-11eb-9e88-c008ae06f13d.png)
-![Screenshot_20201221-030609](https://user-images.githubusercontent.com/53410915/102731991-138f6800-4342-11eb-8ce1-fd89a6b1b8c4.png)
-![Screenshot_20201221-030720](https://user-images.githubusercontent.com/53410915/102731998-1a1ddf80-4342-11eb-8da3-ffa6109e89a6.png)
-![Screenshot_20201221-030836](https://user-images.githubusercontent.com/53410915/102732000-1b4f0c80-4342-11eb-9e5c-43f0c15738b2.png)
-![Screenshot_20201221-030854](https://user-images.githubusercontent.com/53410915/102732001-1b4f0c80-4342-11eb-9f7a-b8032fb4ca79.png)
-![Screenshot_20201221-030939](https://user-images.githubusercontent.com/53410915/102732002-1be7a300-4342-11eb-8884-9c42a0e6676e.png)
-![Screenshot_20201221-031052](https://user-images.githubusercontent.com/53410915/102732007-1e49fd00-4342-11eb-8c9e-6d9936a1aa68.png)
-![Screenshot_20201221-031130](https://user-images.githubusercontent.com/53410915/102732011-20ac5700-4342-11eb-9045-40489c6f6687.png)
-![Screenshot_20201221-031159](https://user-images.githubusercontent.com/53410915/102732014-230eb100-4342-11eb-9a1f-610c70319d70.png)
-![Screenshot_20201221-031214](https://user-images.githubusercontent.com/53410915/102732015-243fde00-4342-11eb-8603-3742563af595.png)
-![Screenshot_20201221-031304](https://user-images.githubusercontent.com/53410915/102732017-2609a180-4342-11eb-9c9e-f17f6d9eb987.png)
-![Screenshot_20201221-031344](https://user-images.githubusercontent.com/53410915/102732026-299d2880-4342-11eb-9225-896dfc0fa5f7.png)
-![Screenshot_20201221-031418](https://user-images.githubusercontent.com/53410915/102732028-2a35bf00-4342-11eb-8c82-d6e9c2ca5191.png)
-![Screenshot_20201221-031506](https://user-images.githubusercontent.com/53410915/102732029-2ace5580-4342-11eb-87ca-1f8c2398a809.png)
+![phpQOcSyPAM](https://user-images.githubusercontent.com/53410915/102803441-ec2bb000-43c0-11eb-818b-e86c791e5a98.jpg)
+![phpTTdTr7AM](https://user-images.githubusercontent.com/53410915/102803276-ad95f580-43c0-11eb-9732-a1feb4b0db0e.jpg)
+![phpuD8DpsAM](https://user-images.githubusercontent.com/53410915/102803256-a8d14180-43c0-11eb-8e5e-69b017e17770.jpg)
+![phpSPv1w1AM](https://user-images.githubusercontent.com/53410915/102803274-ad95f580-43c0-11eb-9a80-d4c4d55b7b2d.jpg)
+![phpMjtgBkAM](https://user-images.githubusercontent.com/53410915/102803269-ac64c880-43c0-11eb-9ac4-ff457c6a9c2f.jpg)
+![phph4pHLuAM](https://user-images.githubusercontent.com/53410915/102803263-ab339b80-43c0-11eb-8c24-e598927ed4f8.jpg)
+![phpDntLxVAM](https://user-images.githubusercontent.com/53410915/102803261-aa9b0500-43c0-11eb-81a4-89b8d30c61b2.jpg)
+![php8tFSJkAM](https://user-images.githubusercontent.com/53410915/102803258-aa026e80-43c0-11eb-864e-65c9ce43c864.jpg)
+![php8D9ChjAM](https://user-images.githubusercontent.com/53410915/102803257-aa026e80-43c0-11eb-96a5-1831bedc7c22.jpg)
+![phpkoDHVoAM](https://user-images.githubusercontent.com/53410915/102803267-abcc3200-43c0-11eb-932c-39ddd8e4b628.jpg)
+![phpHPRd6HAM](https://user-images.githubusercontent.com/53410915/102803265-abcc3200-43c0-11eb-953f-2d34f1301a52.jpg)
+![phpSHjyOjAM](https://user-images.githubusercontent.com/53410915/102803272-acfd5f00-43c0-11eb-9919-5a439bafaffe.jpg)
+![phpBH0YyxAM](https://user-images.githubusercontent.com/53410915/102803259-aa9b0500-43c0-11eb-98b8-3899eaa5916b.jpg)
+![phpfHUZ62AM](https://user-images.githubusercontent.com/53410915/102803262-ab339b80-43c0-11eb-8908-420f60f76289.jpg)
+![phpMUu2TAAM](https://user-images.githubusercontent.com/53410915/102803270-acfd5f00-43c0-11eb-9b45-ff02ce6b18d8.jpg)
+
 
 # Description
-- A project which exactlly like a whatsapp application with its all feature.
+- A whatsapp clone that lets users text, chat, share images, contacts, documents, locations and capturing pics
+  including voice messages and notifying the users by the new messages 
 
 # Not Implemented
 - Voice & video calls 
