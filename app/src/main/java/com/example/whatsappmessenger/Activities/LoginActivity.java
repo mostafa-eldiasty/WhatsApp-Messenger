@@ -36,6 +36,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         if(FirebaseAuth.getInstance().getCurrentUser() != null){
             Intent intent = new Intent(this,ChatsActivity.class);
             startActivity(intent);
+            finish();
         }
 
         countrySpinner = findViewById(R.id.countrySpinner);
